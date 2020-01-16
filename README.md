@@ -10,6 +10,5 @@ Run app by typing
 ```
 ] activate .
 julia> using Genie
-julia> Genie.loadapp()
-julia> Genie.startup()
+julia> Genie.loadapp("."; autostart = true)
 ```
