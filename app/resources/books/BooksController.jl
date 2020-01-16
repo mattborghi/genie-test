@@ -1,6 +1,6 @@
 module BooksController
-  export billgatesbooks
-  
+
+
   using Genie.Renderer.Html
 
   # Build something great
@@ -16,9 +16,10 @@ module BooksController
   Book("The Sympathizer", "Viet Thanh Nguyen"),
   Book("Energy and Civilization, A History", "Vaclav Smil")
   ]
-
+  export billgatesbooks
+    # TODO: Check why VIEWS_FOLDER is not defined
     function billgatesbooks()
       # html("Genie")
-      html(:books, :billgatesbooks, layout = :admin, books = BillGatesBooks)
+      html(:books, "billgatesbooks.jl.md", layout = :app, books = BillGatesBooks)
     end
 end
