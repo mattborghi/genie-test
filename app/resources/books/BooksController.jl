@@ -16,11 +16,8 @@ module BooksController
   Book("Energy and Civilization, A History", "Vaclav Smil")
   ]
 
-    # TODO: Check why VIEWS_FOLDER is not defined
-    # I thing the solution is to check the Genie.Renderer.HTML and import
-    # all the necessary constants
     function billgatesbooks()
-      # html("Genie")
       html(:books, :billgatesbooks, layout = :app, books = BillGatesBooks)
+      # html(:books, "billgatesbooks.jl.md", layout = :app, books = BillGatesBooks)
     end
 end
